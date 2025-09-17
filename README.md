@@ -27,15 +27,12 @@ conda activate SV
 
 ## Usage on HPC
 
-This pipeline is designed to run on an HPC cluster using **PBS job scheduling**.
+This pipeline is designed to run on an HPC cluster using PBS job scheduling.
 
 ```bash
 # Submit the pipeline script
 qsub SV-pipline.sh
-```
 
-
-### Script description
 
 The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 
@@ -46,12 +43,6 @@ The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 #PBS -l nodes=1:ppn=40     # resources: 1 node, 40 CPU cores
 ```
 
-
-### Environment activation inside the script
-
-```bash
-source activate SV
-```
 
 
 ### Configure your sample
