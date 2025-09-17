@@ -27,12 +27,6 @@ conda activate SV
 
 ## Usage on HPC
 
-This pipeline is designed to run on an HPC cluster using PBS job scheduling.
-
-```bash
-# Submit the pipeline script
-qsub SV-pipline.sh
-```
 
 The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 
@@ -74,6 +68,7 @@ Results will be written to directories such as:
 - `5.minimap2-SVIM-asm/`
 - `6.nucmer-SyRI/`
 - `7.merge/`
+
 Each folder contains the intermediate alignment files and SV calls.
 
 
