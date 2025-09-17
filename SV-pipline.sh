@@ -5,7 +5,8 @@
 #PBS -l nodes=1:ppn=40
 
 cd $PBS_O_WORKDIR
-source activate tyh
+source ~/.bashrc
+conda activate SV
 
 threads=40
 name=
