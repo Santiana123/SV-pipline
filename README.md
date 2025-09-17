@@ -43,7 +43,6 @@ The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 #PBS -l nodes=1:ppn=40     # resources: 1 node, 40 CPU cores
 ```
 
-### Configure your sample
 
 Before submission, edit **SV-pipline.sh** to specify:
 
@@ -56,10 +55,7 @@ reads=/path/to/sample1.fastq.gz
 
 Other variables:
 
-- `threads=40` → number of CPU threads  
-- `query` → path to query genome (if assembly-based pipeline is used)  
-- `read_group` → read group information (auto-generated from `name`)  
-
+- `threads=40` → number of CPU threads   
 
 
 ## Example
