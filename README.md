@@ -43,8 +43,6 @@ The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 #PBS -l nodes=1:ppn=40     # resources: 1 node, 40 CPU cores
 ```
 
-
-
 ### Configure your sample
 
 Before submission, edit **SV-pipline.sh** to specify:
@@ -62,7 +60,7 @@ Other variables:
 - `query` → path to query genome (if assembly-based pipeline is used)  
 - `read_group` → read group information (auto-generated from `name`)  
 
----
+
 
 ## Example
 
@@ -94,7 +92,6 @@ Typical outputs include:
 
 Each pipeline directory is self-contained and can be inspected independently.
 
----
 
 ## Citation
 
