@@ -23,7 +23,7 @@ conda env create -f SV-pipline.yaml
 
 # Activate the environment
 conda activate SV
-
+```
 
 ## Usage on HPC
 
@@ -32,7 +32,7 @@ This pipeline is designed to run on an HPC cluster using PBS job scheduling.
 ```bash
 # Submit the pipeline script
 qsub SV-pipline.sh
-
+```
 
 The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 
