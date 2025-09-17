@@ -93,7 +93,7 @@ mkdir 7.merge
 cd 7.merge
 cp ../1.pbmm2-cutesv2/${name}.vcf ./cutesv.vcf
 cp ../2.minimap2-sniffles2/${name}.vcf ./sniffles2.vcf
-cp ../3.ngmlr-svim/work-place/variants.vcf ./svim.vcf
+cp ../3.ngmlr-svim/variants.vcf ./svim.vcf
 cp ../4.winnowmap-pbsv/${name}.vcf ./pbsv.vcf
 cp ../5.minimap2-SVIM-asm/variants.vcf ./svim-asm.vcf
 cp ../6.nucmer-SyRI/${name}.vcf ./SyRI.vcf
