@@ -15,14 +15,14 @@ The overall workflow of SV-pipline is illustrated in the following diagram:
 
 ```bash
 # Clone the repository
-git clone https://github.com/你的用户名/你的仓库名.git
-cd 你的仓库名
+git clone https://github.com/Santiana123/SV-pipline.git
+cd SV-pipline
 
 # Create a conda environment using the provided YAML file
 conda env create -f SV-pipline.yaml
 
 # Activate the environment
-conda activate sv-pipline
+conda activate SV
 
 
 ## Usage on HPC
@@ -34,7 +34,6 @@ This pipeline is designed to run on an HPC cluster using **PBS job scheduling**.
 qsub SV-pipline.sh
 ```
 
----
 
 ### Script description
 
@@ -47,15 +46,13 @@ The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 #PBS -l nodes=1:ppn=40     # resources: 1 node, 40 CPU cores
 ```
 
----
 
 ### Environment activation inside the script
 
 ```bash
-source activate sv-pipline
+source activate SV
 ```
 
----
 
 ### Configure your sample
 
@@ -64,6 +61,7 @@ Before submission, edit **SV-pipline.sh** to specify:
 ```bash
 name=sample1
 ref=/path/to/reference.fasta
+query=/path/to/query.fasta
 reads=/path/to/sample1.fastq.gz
 ```
 
@@ -88,10 +86,11 @@ Results will be written to directories such as:
 - `2.minimap2-sniffles2/`  
 - `3.ngmlr-svim/`  
 - `4.winnowmap-pbsv/`  
-
+- `5.minimap2-SVIM-asm/`
+- `6.nucmer-SyRI/`
+- `7.merge/`
 Each folder contains the intermediate alignment files and SV calls.
 
----
 
 ## Output files description
 
@@ -110,4 +109,4 @@ Each pipeline directory is self-contained and can be inspected independently.
 
 If you use this pipeline, please cite the benchmarking study:
 
-**Liu et al.**,
+Liu Z, Xie Z, Li M. Comprehensive and deep evaluation of structural variation detection pipelines with third-generation sequencing data[J]. Genome Biology, 2024, 25(1): 188.
