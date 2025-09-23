@@ -25,7 +25,7 @@ source /public/home/yuejingjing/.bashrc
 source activate /public/home/yuejingjing/mambaforge/envs/test
 
 # Step 1: DP过滤
-bash filter_vcf_by_dp.sh "$in_vcf" "$filtered_vcf" $depth_min $depth_max
+bash filter_dv.sh "$in_vcf" "$filtered_vcf" $depth_min $depth_max
 
 # Step 2: 拆分SNP/Indel
 bash split_snp_indel.sh "$filtered_vcf" "$snp_vcf" "$indel_vcf"
