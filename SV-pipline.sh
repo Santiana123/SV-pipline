@@ -99,4 +99,4 @@ cp ../4.winnowmap-pbsv/${name}.vcf ./pbsv.vcf
 cp ../5.minimap2-SVIM-asm/variants.vcf ./svim-asm.vcf
 cp ../6.nucmer-SyRI/${name}.vcf ./SyRI.vcf
 ls *.vcf > sample
-SURVIVOR merge sample 1000 4 1 1 0 50 merge.vcf
+SURVIVOR merge sample 1000 3 1 1 0 50 merge.vcf
