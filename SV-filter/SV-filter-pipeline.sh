@@ -24,10 +24,10 @@ echo "Depth range: $depth_min - $depth_max"
 
 # Step 1: Filtering
 echo "[1/6] Filtering VCFs ..."
-bash /public/home/stu_tongyihan/project/7.solo_and_wild_vs_sunset/scripts/filter_cutesv.sh cutesv.vcf cutesv.f.vcf $depth_min $depth_max
-bash /public/home/stu_tongyihan/project/7.solo_and_wild_vs_sunset/scripts/filter_sniffles2.sh sniffles2.vcf sniffles2.f.vcf $depth_min $depth_max
-bash /public/home/stu_tongyihan/project/7.solo_and_wild_vs_sunset/scripts/filter_svim.sh svim.vcf svim.f.vcf $depth_min $depth_max
-bash /public/home/stu_tongyihan/project/7.solo_and_wild_vs_sunset/scripts/filter_pbsv.sh pbsv.vcf pbsv.f.vcf $depth_min $depth_max
+bash filter_cutesv.sh cutesv.vcf cutesv.f.vcf $depth_min $depth_max
+bash filter_sniffles2.sh sniffles2.vcf sniffles2.f.vcf $depth_min $depth_max
+bash filter_svim.sh svim.vcf svim.f.vcf $depth_min $depth_max
+bash filter_pbsv.sh pbsv.vcf pbsv.f.vcf $depth_min $depth_max
 
 # Step 2: Merge with SURVIVOR
 echo "[2/6] Merging VCFs with SURVIVOR ..."
@@ -36,7 +36,7 @@ SURVIVOR merge sample 1000 3 1 1 0 50 merge.vcf
 
 # Step 3: Extract INV breakpoints
 echo "[3/6] Extracting INV breakpoints ..."
-bash /public/home/stu_tongyihan/project/7.solo_and_wild_vs_sunset/scripts/INV-breakpoints-finder.sh merge.vcf INV.breakpoint.txt
+bash INV-breakpoints-finder.sh merge.vcf INV.breakpoint.txt
 
 # Step 4: Adjust BND with Python script
 echo "[4/6] Adjusting BND (filter misclassified INV) ..."
@@ -45,11 +45,11 @@ grep -v -Ff deleted_ids.txt merge.vcf > merge.filtered.vcf
 
 # Step 5: Statistics
 echo "[5/6] Generating statistics ..."
-bash /public/home/stu_tongyihan/project/7.solo_and_wild_vs_sunset/scripts/stat_sv.sh merge.filtered.vcf statistic.number+length.txt
+bash stat_sv.sh merge.filtered.vcf statistic.number+length.txt
 
 # Step 6: Extract DUP info
 echo "[6/6] Extracting DUP info ..."
-bash /public/home/stu_tongyihan/project/7.solo_and_wild_vs_sunset/scripts/extract_dup.sh merge.vcf DUP.location.txt
+bash extract_dup.sh merge.vcf DUP.location.txt
 
 echo "=== SV Merging Pipeline Finished Successfully ==="
 echo "Results:"
