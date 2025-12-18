@@ -1,6 +1,6 @@
 #!/bin/bash
 #PBS -j oe 
-#PBS -q FAFU3
+#PBS -q queue_name
 #PBS -V 
 #PBS -l nodes=1:ppn=40
 
