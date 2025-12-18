@@ -37,7 +37,7 @@ cut -f1 reference.fasta.fai | parallel -j4 "samtools index -@8 split/${name}.{}.
 
 cut -f1 reference.fasta.fai | parallel -j4 "
       contig={};
-      singularity run /public/home/yuejingjing/tyh/container/deepvariant_1.6.1.sif \
+      singularity run deepvariant_1.6.1.sif \
         /opt/deepvariant/bin/run_deepvariant \
         --model_type=PACBIO \
         --ref=fabyChr/{}.fasta \
