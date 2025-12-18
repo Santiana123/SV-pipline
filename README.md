@@ -133,6 +133,7 @@ Each pipeline directory is self-contained and can be inspected independently.
 ## Notes
 
 The SV-filter module is designed for structural variant post-processing. For software usage details, refer to their official documentation.
+
 The DeepVariant-filter directory provides auxiliary scripts for SNP/INDEL filtering and is independent of the SV pipeline. See the corresponding software docs for parameter settings and troubleshooting.
 
 
