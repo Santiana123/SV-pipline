@@ -19,7 +19,7 @@ git clone https://github.com/Santiana123/SV-pipline.git
 cd SV-pipline
 
 # Create a conda environment using the provided YAML file
-conda env create -f SV-pipline.yaml
+conda env create -f Installation/SV-pipline.yaml
 
 # Activate the environment
 conda activate SV
