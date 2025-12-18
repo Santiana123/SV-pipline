@@ -53,7 +53,7 @@ The job submission script (`SV-pipline.sh`) includes typical PBS directives:
 
 ```bash
 #PBS -j oe                 # merge stdout and stderr
-#PBS -q FAFU3              # queue name
+#PBS -q queue_name         # queue name
 #PBS -V                    # export environment variables
 #PBS -l nodes=1:ppn=40     # resources: 1 node, 40 CPU cores
 ```
